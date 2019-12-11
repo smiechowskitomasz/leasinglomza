@@ -1,0 +1,276 @@
+@import 'variables'
+@import 'mixins'
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+
+  padding: 0
+  box-sizing: border-box
+  font-family: proxima-nova, sans-serif
+  font-style: normal
+  font-weight: 100
+
+.wrapper
+
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  position: relative
+
+  // align-content: flex-start
+  .header
+    display: flex
+    justify-content: space-around
+    flex-basis: 100%
+    align-items: center
+    color: $blue
+    @media( min-width: 799px )
+
+      justify-content: flex-end
+
+  .hamburger
+    z-index: 2
+    cursor: pointer
+    @media( min-width: 799px )
+      display: none
+
+  .nav
+    height: 300px
+    padding: 100px 0 50px 0
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    text-align: center
+    background-color: white
+    z-index: 1
+    @media( min-width: 799px )
+      position: relative
+      padding: 0
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      z-index: 0
+      background-color: transparent
+      height: 150px
+      &__list
+        display: flex
+        list-style: none
+      &__link
+        text-decoration: none
+
+  .aboutUs
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    // padding: 80px 6%
+    flex-basis: 100%
+    overflow: hidden
+    border-radius: 5px
+    background-color: #DFEBF3
+    text-align: center
+    @media( min-width: 799px )
+      flex-direction: row
+    &__container
+      @media( min-width: 799px )
+        flex-basis: 50%
+
+    &__header
+      font-size: $h2size
+      margin: 80px 16px 18px 16px
+
+    &__paragrph
+      margin: 0 16px
+      font-size: 20px
+      color: $gray
+    &__btn
+      margin: 40px 16px 60px 16px
+      background-color: $blue
+      border: 0
+      color: #fff
+      padding: 10px 50px
+      border-radius: 50px
+      justify-content: center
+      font-size: 16px
+    &__img
+      flex-basis: 100%
+      @media( min-width: 799px )
+        min-width: 566px
+        min-height: 757px
+        max-height: 757px
+        max-width: 566px
+
+  .ourServices
+    display: flex
+    flex-wrap: wrap
+    transform: translateY(-100px)
+
+    justify-content: center
+    @media ( min-width: 799px )
+      justify-content: space-evenly
+    &__container
+      padding: 40px
+      flex-basis: 90%
+      background-color: #fff
+      border-radius: 5px
+      margin-top: 16px
+      box-shadow: 0 0 10px -5px #000
+      @media ( min-width: 799px )
+        flex-basis: 21%
+
+    &__header
+      margin: 24px 0 8px 0
+      font-size: $h3size
+    &__introduction
+      font-size: 16px
+      color: $gray
+  .whyUs
+    display: flex
+    flex-direction: column
+    padding: 20px
+    @media( min-width: 799px )
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-evenly
+      margin-top: 87px
+      margin-bottom: 160px
+    &__header
+      font-size: $h2size
+      @media( min-width: 799px )
+        font-size: $h1size
+        flex-basis: 45%
+
+    &__description
+      font-size: 20px
+      line-height: 150%
+      margin-top: 18px
+      color: #5E6C7A
+      @media( min-width: 799px )
+        font-size: $p1size
+        flex-basis: 45%
+
+  .benefits
+    display: flex
+    flex-wrap: wrap
+    background-color: white
+    justify-content: space-evenly
+    padding-bottom: 80px
+
+    &__head
+      padding: 24px 0
+      margin: 80px 24px 24px 24px
+      border-bottom: 1px solid #eeeeee
+      flex-basis: 90%
+      font-size: $h2size
+    &__container
+      flex-basis: 90%
+      padding: 24px
+      margin-top: 40px
+      @media( min-width: 799px )
+        flex-basis: 22%
+    &__header
+      margin: 20px 0 8px 0
+      font-size: $h3size
+    &__introduction
+      font-size: $p2size
+      color: $gray
+      line-height: 150%
+  .contactUs
+    display: flex
+    flex-direction: column
+    text-align: center
+    margin-top: 160px
+    padding-bottom: 119px
+    &.desktop
+      @media( max-width: 799px )
+        display: none
+
+    &__header
+      font-size: $h1size
+      color: #000000
+      line-height: 100%
+      &--newLine
+        color: $gray
+    &__btn
+      width: 333.3px
+      margin: 40px auto 64px auto
+      font-size: $h3size
+      background-color: $blue
+      border: 0
+      color: #fff
+      padding: 20px 40px
+      border-radius: 50px
+      justify-content: center
+
+    &__ourAdress
+      font-size: $p1size
+      color: $gray
+      line-height: 36px
+      &.contactUs__ourAdress--changeColor
+        color: #000000
+        font-weight: 800
+
+  .map
+    iframe
+      max-width: 100%
+      height: 640px
+      overflow: hidden
+.footer
+  display: flex
+  flex-basis: 100%
+  background-color: #fff
+  flex-wrap: wrap
+  justify-content: space-evenly
+  .navBottom
+
+    display: flex
+    justify-content: flex-start
+    width: 90%
+    margin: 0 auto
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    &__list
+      display: flex
+      align-items: center
+      justify-content: space-evenly
+      list-style: none
+      flex-grow: 1
+    &__item
+      display: flex
+      justify-content: center
+      padding: 20px 10px
+
+      font-size: $h4size
+
+    &__link
+
+      color: #000000
+  .footerList
+    margin: 48px 0 120px 0
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    flex-basis: 15%
+    &__header
+      font-size: $h4size
+    &__item
+      font-size: $p2size
+      text-decoration-line: underline
+      color: $gray
+      line-height: 48px
+
+main
+  width: 100%
+  padding: 5vh 2vw
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #D7E5EE 100%)
+  border-radius: 5px
+.desktop
+  display: flex
+  @media ( max-width:  1024px)
+    display: none
+.active
+  display: block

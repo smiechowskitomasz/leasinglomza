@@ -1,0 +1,81 @@
+body {
+  margin: 5%;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+.naglowek {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  position: relative;
+}
+
+.naglowek .logoContainer {
+  width: 100px;
+  height: auto;
+}
+
+.naglowek .hamburger {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+}
+
+.naglowek p {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 100px;
+  font-weight: 700;
+  font-family: Proxima Nova;
+  font-size: 18px;
+  color: #0197ff;
+}
+
+.naglowek .desktop {
+  display: none;
+}
+
+.imgWrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav {
+  font-size: 10px;
+}
+
+ul {
+  color: red;
+}
+
+article {
+  background-color: #DFEBF3;
+}
+
+main {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#D7E5EE));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #D7E5EE 100%);
+  border-radius: 5px;
+}
+
+.desktop {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.min.css.map */
