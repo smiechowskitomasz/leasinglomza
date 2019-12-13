@@ -13,8 +13,9 @@
 <body>
   <div class="wrapper">
     <header class="header">
+
       <div class="logo">
-        <svg class="logoContainer" width="150" height="150" viewBox="0 0 150 150" fill="none"
+        <svg class="logo__svg" width="150" height="150" viewBox="0 0 150 150" fill="none"
           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect width="150" height="150" fill="url(#pattern0)" />
           <defs>
@@ -26,23 +27,33 @@
           </defs>
         </svg>
       </div>
-      <p>+48 508 393 037<p>
-          <p class="desktop">ul Wojska Polskiego 103a, 18-400 Łomża</p>
-          <div class="hamburger"><svg class="hamburger" width="40" height="22" viewBox="0 0 40 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="40" height="2" fill="#5E6C7A" />
-              <rect y="10" width="40" height="2" fill="#5E6C7A" />
-              <rect y="20" width="32" height="2" fill="#5E6C7A" />
-            </svg></div>
-          <nav class="nav desktop">
-            <ul class="nav__list">
-              <li class="nav__item"> <a href="#" class="nav__link">Leasing dla Firm</a></li>
-              <li class="nav__item"> <a href="#" class="nav__link">Leasing Konsumencki</a></li>
-              <li class="nav__item"> <a href="#" class="nav__link">Najem dłuoterminowy</a></li>
-              <li class="nav__item"> <a href="#" class="nav__link">Kredyt Samochodowy</a></li>
-              <li class="nav__item"> <a href="#" class="nav__link">Ubezpieczenia</a></li>
-            </ul>
-          </nav>
+
+      <div class="header__contact">
+        <p class="header__phone"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.22887 9.22802C7.64522 10.8117 5.81211 12.3247 5.08694 11.6005C4.04868 10.5632 3.40937 9.65929 1.12176 11.4975C-1.16585 13.3367 0.59152 14.5618 1.59645 15.5678C2.75692 16.7273 7.08065 15.6294 11.3549 11.3551C15.6281 7.08076 16.728 2.75696 15.5675 1.59647C14.5626 0.590507 13.3375 -1.16588 11.4983 1.12278C9.65913 3.40942 10.5631 4.04875 11.6013 5.08702C12.3255 5.81119 10.8125 7.64434 9.22887 9.22802Z"
+              fill="#3EADFD" />
+          </svg>
+          +48 508 393 037<p>
+            <p class="header__adress header__adress--grayColor desktop ">ul Wojska Polskiego 103a, 18-400 Łomża</p>
+      </div>
+      <div class="hamburger"><svg class="hamburger" width="40" height="22" viewBox="0 0 40 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="2" fill="#5E6C7A" />
+          <rect y="10" width="40" height="2" fill="#5E6C7A" />
+          <rect y="20" width="32" height="2" fill="#5E6C7A" />
+        </svg></div>
+      <nav class="nav desktop">
+        <ul class="nav__list">
+          <li class="nav__item"> <a href="#" class="nav__link">Leasing dla Firm</a></li>
+          <li class="nav__item"> <a href="#" class="nav__link">Leasing Konsumencki</a></li>
+          <li class="nav__item"> <a href="#" class="nav__link">Najem dłuoterminowy</a></li>
+          <li class="nav__item"> <a href="#" class="nav__link">Kredyt Samochodowy</a></li>
+          <li class="nav__item"> <a href="#" class="nav__link">Ubezpieczenia</a></li>
+        </ul>
+      </nav>
+
 
 
 
@@ -62,7 +73,8 @@
                 fill="white" />
             </svg>&nbsp +48 508 393 037</button>
         </div>
-        <img class="aboutUs__img" src="img/Photo.jpg" alt="usmiechniety mezczyzna">
+        <img class="aboutUs__img aboutUs__img--desktopImg" src="img/PhotoBig.png" alt="usmiechniety mezczyzna">
+        <img class="aboutUs__img aboutUs__img--mobileImg" src="img/PhotoSmall.png" alt="usmiechniety mezczyzna">
       </section>
       <section class="ourServices">
         <div class="ourServices__container">
