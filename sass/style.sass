@@ -25,12 +25,51 @@ body
   .header
     display: flex
     justify-content: space-around
-    flex-basis: 100%
     align-items: center
-    color: $blue
-    @media( min-width: 799px )
+    flex-basis: 100%
+    color: #3EADFD
+    flex-wrap: wrap
+    position: relative
 
-      justify-content: flex-end
+    @media( min-width: 799px )
+      // justify-content: center
+      flex-basis: 85%
+      margin: 0 auto
+      height: 150px
+      max-height: 150px
+    .logo
+      @media( min-width: 799px )
+        position: absolute
+        top: 0
+        left: 0
+    .logo__svg
+      @media( max-width: 799px )
+        max-width: 100px
+        max-height: 100px
+    &__contact
+      display: flex
+      flex-direction: row-reverse
+      height: 100%
+      align-items: center
+      padding: 0 16px
+      border-left: 1px solid rgba(0, 0, 0, 0.1)
+      border-right: 1px solid rgba(0, 0, 0, 0.1)
+      @media( min-width: 799px )
+        font-size: $h4size
+        font-weight: bold
+        border: 0
+        padding: 0
+        flex-basis: 100%
+        margin-left: 150px
+        height: 58px
+        align-items: center
+        justify-content: flex-start
+    &__adress
+      &--grayColor
+        font-weight: normal
+        color: $gray
+        font-size: $p2size
+        margin-right: 40px
 
   .hamburger
     z-index: 2
@@ -49,25 +88,45 @@ body
     background-color: white
     z-index: 1
     @media( min-width: 799px )
+      font-size: 18px
+      line-height: 20px
       position: relative
       padding: 0
       display: flex
       flex-direction: row
-      justify-content: flex-start
-      z-index: 0
+      justify-content: flex-end
       background-color: transparent
-      height: 150px
+      height: 70px
+      align-items: center
+      flex-basis: 100%
+      margin-left: 190px
+      border-top: 1px solid rgba(0, 0, 0, 0.1)
+      height: 92px
       &__list
         display: flex
         list-style: none
+        @media( min-width: 799px)
+
+          flex-basis: 100%
+          justify-content: space-between
+      &__item
+       @media( min-width: 799px)
+
+         font-weight: 700
+         margin: 0 15px
+         text-align: center
+
       &__link
         text-decoration: none
+        color: #001931
+        &:hover
+          color: $blue
 
   .aboutUs
     box-sizing: border-box
     display: flex
     flex-direction: column
-    justify-content: space-between
+    justify-content: space-evenly
     // padding: 80px 6%
     flex-basis: 100%
     overflow: hidden
@@ -76,58 +135,110 @@ body
     text-align: center
     @media( min-width: 799px )
       flex-direction: row
+      justify-content: space-between
+      text-align: left
     &__container
       @media( min-width: 799px )
-        flex-basis: 50%
+        flex-basis: 40%
+        margin-left: 80px
 
     &__header
       font-size: $h2size
       margin: 80px 16px 18px 16px
+      @media( min-width: 799px )
+        margin-top: 160px
+        font-size: $h1size
 
     &__paragrph
       margin: 0 16px
       font-size: 20px
       color: $gray
+      @media( min-width: 799px )
+        margin-top: 16px
+        font-size: $p1size
+        line-height: 150%
     &__btn
-      margin: 40px 16px 60px 16px
+
+      margin: 40px 16px 230px 16px
       background-color: $blue
       border: 0
       color: #fff
-      padding: 10px 50px
+      padding: 20px 50px 20px 70px
       border-radius: 50px
-      justify-content: center
       font-size: 16px
+      position: relative
+      transform: translateX(150px)
+      cursor: pointer
+      z-index: 1
+      font-weight: 600
+      &:before
+        content: 'zadzwoń'
+        background-color: $gray
+        padding: 20px 70px 20px 50px
+        position: absolute
+        left: -145px
+        top: 0
+        z-index: -1
+        // border-top-left-radius: 50px
+        // border-bottom-left-radius: 50px
+        border-radius: 50px
+        text-transform: uppercase
+        @media( max-width: 799px )
+          display: none
+
+      @media( max-width: 799px )
+        margin: 40px 16px 60px 16px
+        transform: translateX(  0px)
+        padding: 20px 50px
+
     &__img
       flex-basis: 100%
       @media( min-width: 799px )
-        min-width: 566px
-        min-height: 757px
+        // min-width: 566px
+        // min-height: 757px
         max-height: 757px
         max-width: 566px
+        margin-top: auto
+      &--desktopImg
+        display: none
+        @media( min-width: 799px )
+          display: flex
+      &--mobileImg
+        display: flex
+        @media( min-width: 799px )
+          display: none
 
   .ourServices
     display: flex
-    flex-wrap: wrap
     transform: translateY(-100px)
-
+    width: 100%
     justify-content: center
+    flex-wrap: wrap
+
     @media ( min-width: 799px )
-      justify-content: space-evenly
+      margin: 0 80px
+      transform: translateY(-150px)
+      flex-wrap: nowrap
+      width: 90%
     &__container
       padding: 40px
-      flex-basis: 90%
+      margin: 12px
+      flex-basis: 100%
       background-color: #fff
       border-radius: 5px
       margin-top: 16px
-      box-shadow: 0 0 10px -5px #000
+
       @media ( min-width: 799px )
-        flex-basis: 21%
+        flex-basis: 90%
+      &:hover
+        box-shadow: 0px 0px 40px #BECBD4
 
     &__header
       margin: 24px 0 8px 0
       font-size: $h3size
     &__introduction
       font-size: 16px
+      line-height: 24px
       color: $gray
   .whyUs
     display: flex
@@ -136,14 +247,14 @@ body
     @media( min-width: 799px )
       flex-direction: row
       flex-wrap: wrap
-      justify-content: space-evenly
-      margin-top: 87px
+      justify-content: space-around
+      margin-top: 37px
       margin-bottom: 160px
     &__header
       font-size: $h2size
       @media( min-width: 799px )
         font-size: $h1size
-        flex-basis: 45%
+        flex-basis: 33%
 
     &__description
       font-size: 20px
@@ -152,7 +263,7 @@ body
       color: #5E6C7A
       @media( min-width: 799px )
         font-size: $p1size
-        flex-basis: 45%
+        flex-basis: 33%
 
   .benefits
     display: flex
@@ -206,6 +317,7 @@ body
       padding: 20px 40px
       border-radius: 50px
       justify-content: center
+      cursor: pointer
 
     &__ourAdress
       font-size: $p1size
@@ -249,12 +361,11 @@ body
     &__link
 
       color: #000000
+      &:hover
+        color: #5E6C7A
   .footerList
     margin: 48px 0 120px 0
-    display: flex
-    flex-direction: column
-    flex-wrap: wrap
-    flex-basis: 15%
+    flex-basis: 12%
     &__header
       font-size: $h4size
     &__item
@@ -265,12 +376,10 @@ body
 
 main
   width: 100%
-  padding: 5vh 2vw
+  padding: 0 2vw 5vh 2vw
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #D7E5EE 100%)
   border-radius: 5px
 .desktop
   display: flex
   @media ( max-width:  1024px)
     display: none
-.active
-  display: block
