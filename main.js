@@ -4,3 +4,9 @@ hamburgerBtn.addEventListener('click', () => {
   showMenu.classList.toggle('desktop')
 
 })
+
+window.sr = ScrollReveal();
+
+sr.reveal('.animation', {
+  duration: 2000
+})
