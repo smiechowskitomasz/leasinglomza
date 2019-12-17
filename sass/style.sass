@@ -48,8 +48,8 @@ body
       // left: 0
       // top: 0
       z-index: 3
-      // width: 100px
-      // height: 100px
+      width: 100px
+      height: 100px
       @media( min-width: 799px )
         position: absolute
         top: 0
@@ -161,7 +161,6 @@ body
     z-index: 1
     background: $gray
     height: calc(100vh - 100px
-    madding-bottom: 5vh
 
     @media( min-width: 799px )
       top: 0
@@ -180,12 +179,9 @@ body
       margin-top: 70px
       border-top: 1px solid rgba(0, 0, 0, 0.1)
       height: 92px
-    &__adress--activeMenu
-      @media( min-width: 799px)
-        display: none
-    &__btn
-      @media( min-width: 799px)
-        display: none
+    &.desktop
+      display: none
+
     &__list
       display: flex
       list-style: none
@@ -219,7 +215,9 @@ body
     &__mobile-arrow
       @media( min-width: 799px )
         display: none
+
     &__addressActiveMenu
+      margin-top: 25px
       font-size: $p2size
       line-height: 150%
       color: #FFFFFF
@@ -235,6 +233,7 @@ body
       border-radius: 50px
       font-size: 18px
       font-weight: 600
+      margin: auto
 
   .aboutUs
     box-sizing: border-box
