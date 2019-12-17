@@ -274,8 +274,10 @@ body {
   }
 }
 
-.wrapper .nav.desktop {
-  display: none;
+@media (max-width: 799px) {
+  .wrapper .nav.desktop {
+    display: none;
+  }
 }
 
 .wrapper .nav__list {
@@ -362,11 +364,17 @@ body {
   background-color: #0197ff;
   border: 0;
   color: #fff;
-  padding: 18px 50px;
+  padding: 18px 80px;
   border-radius: 50px;
   font-size: 18px;
   font-weight: 600;
   margin: auto;
+}
+
+@media (min-width: 799px) {
+  .wrapper .nav__btn {
+    display: none;
+  }
 }
 
 .wrapper .aboutUs {
@@ -481,7 +489,7 @@ body {
     margin: 40px 16px 60px 16px;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    padding: 20px 50px;
+    padding: 20px 80px;
   }
 }
 
