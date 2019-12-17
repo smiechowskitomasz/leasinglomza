@@ -180,7 +180,8 @@ body
       border-top: 1px solid rgba(0, 0, 0, 0.1)
       height: 92px
     &.desktop
-      display: none
+      @media ( max-width: 799px  )
+        display: none
 
     &__list
       display: flex
@@ -215,7 +216,6 @@ body
     &__mobile-arrow
       @media( min-width: 799px )
         display: none
-
     &__addressActiveMenu
       margin-top: 25px
       font-size: $p2size
@@ -229,11 +229,13 @@ body
       background-color: #0197ff
       border: 0
       color: #fff
-      padding: 18px 50px
+      padding: 18px 80px
       border-radius: 50px
       font-size: 18px
       font-weight: 600
       margin: auto
+      @media( min-width: 799px )
+        display: none
 
   .aboutUs
     box-sizing: border-box
@@ -304,7 +306,7 @@ body
       @media( max-width: 799px )
         margin: 40px 16px 60px 16px
         transform: translateX(  0px)
-        padding: 20px 50px
+        padding: 20px 80px
 
     &__img
       flex-basis: 100%
